@@ -2,9 +2,10 @@
 // Programs will have a name, description, and URL
 let programs = [
   {
+    id: "uwUt1fVLb3E",
     name: "Alicia Keys NPR Tiny Desk Concert",
     description: "The lovely Alicia performs at NPR studios.",
-    url: "https://youtu.be/uwUt1fVLb3E",
+    url: "https://www.youtube.com/watch?v=uwUt1fVLb3E",
     duration: {
       hours: 0,
       minutes: 27,
@@ -48,7 +49,7 @@ function updateProgramList() {
       </span>
       <button 
         id="watchProgramButton"
-        onclick="loadProgram(program)"
+        onclick="loadProgram('${program.id}')"
       >
         Watch
       </button>
@@ -56,6 +57,26 @@ function updateProgramList() {
     programList.appendChild(programCard);
   });
 }
+
+// Build a function that will load a video and display it in the app
+// Takes a program id as an argument
+function loadProgram(id) {
+  const tvContainer = document.getElementById("tvContainer");
+  tvContainer.innerHTML = `
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/${id}" 
+      title="YouTube Video Player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen
+    ></iframe>
+  `;
+}
+
+// TODO: Build a function that will add a new program to the programs list,
+// then update the program list in the UI
 
 // Update program list upon load
 updateProgramList();
