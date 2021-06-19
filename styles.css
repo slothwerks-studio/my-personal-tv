@@ -1,0 +1,5 @@
+#tvImage {
+  width: 560px;
+  height: 315px;
+  background: center / contain no-repeat url("television.png");
+}
