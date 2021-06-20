@@ -1,13 +1,22 @@
-// Create array of programs
-// Programs will have a title, description, and URL
-const programs = [
-  {
-    id: "uwUt1fVLb3E",
-    title: "Alicia Keys NPR Tiny Desk Concert",
-    description: "The lovely Alicia performs at NPR studios.",
-    url: "https://www.youtube.com/watch?v=uwUt1fVLb3E"
-  }
-];
+let programs = [];
+// Check to see if there are any program stored in localStorage
+// If no data is stored; result will be null
+const savedPrograms = localStorage.getItem("programs");
+if (savedPrograms) {
+  // Parse saved data and save to programs
+  programs = JSON.parse(savedPrograms);
+} else {
+  // Build array of programs
+  // Programs will have a title, description, and URL
+  programs = [
+    {
+      id: "uwUt1fVLb3E",
+      title: "Alicia Keys NPR Tiny Desk Concert",
+      description: "The lovely Alicia performs at NPR studios.",
+      url: "https://www.youtube.com/watch?v=uwUt1fVLb3E"
+    }
+  ];
+}
 
 // Build a function that will show the current list of programs in the UI
 function updateProgramList() {
@@ -91,6 +100,9 @@ function addVideo(event) {
     console.log("We're saving this program data: ", program);
     // Add to the program list array
     programs.push(program);
+    // Update saved data in localStorage
+    const json = JSON.stringify(programs);
+    localStorage.setItem("programs", json);
     // Reload the list in the UI
     updateProgramList();
   }

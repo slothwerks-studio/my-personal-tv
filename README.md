@@ -11,4 +11,5 @@ Want to try out the code?  Check out this [live preview](https://slothwerks-stud
 ### Improvements
 
 - There are almost no styles for this app; these must be added in order to improve the UI and make it mobile-friendly.
-- 
+- Due to [cross-origin issues](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors), videos may only be viewed if accessing the [deployed version of the site on GitHub Pages](https://slothwerks-studio.github.io/my-personal-tv/).
+- Videos may be added to the list but not edited or removed.
