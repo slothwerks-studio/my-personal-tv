@@ -97,11 +97,11 @@ function addVideo(event) {
 }
 
 // Build a helper function that removes additional data from the end of
-// a URL (the stuff starting with "&") and returns a url converted to lowercase
+// a URL (the stuff starting with "&")
 // Takes a string website link as an argument
 function cleanUrl(url) {
   const parts = url.split("&");
-  return parts[0].toLowerCase();
+  return parts[0];
 }
 
 // Update form to include addVideo as submission handler
