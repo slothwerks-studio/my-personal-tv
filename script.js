@@ -105,6 +105,8 @@ function addVideo(event) {
     localStorage.setItem("programs", json);
     // Reload the list in the UI
     updateProgramList();
+    // Clear the form
+    programForm.reset();
   }
 }
 
