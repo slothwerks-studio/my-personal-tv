@@ -85,6 +85,7 @@ function addVideo(event) {
   } else if (url.includes("youtu.be/")) {
     // This is a link pulled from the YouTube "share" feature
     parts = url.split("youtu.be/");
+    id = parts[1];
   } else {
     window.alert("We can't use this link to save the video.");
   }
