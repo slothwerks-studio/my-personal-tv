@@ -1,5 +1,33 @@
+body{
+
+}
+body h1{
+	
+	text-align: center;
+}
+
 #tvImage {
   width: 560px;
-  height: 315px;
-  background: center / contain no-repeat url("television.png");
+  height: 421px;
+  background: center / contain no-repeat url("TV.jpg");
+  margin: auto;
+}
+.prog{
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    background: linear-gradient(white, #D3D8E8);
+	border: 3px solid red;
+	border-radius: 15px;
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.form1{
+	width: 50%;
+	height: 30px;
+	border-radius: 5px;
+}
+.butt{
+	width: 30%;
+	height: 30px;
 }
